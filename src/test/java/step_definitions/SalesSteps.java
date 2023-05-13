@@ -43,8 +43,7 @@ public class SalesSteps {
     @And("User add \"(.*)\" and \"(.*)\" to cart")
     public void add2Product(String product1, String product2) {
         SalesPage salesPage = new SalesPage(webDriver);
-        salesPage.addProduct1(product1);
-        salesPage.addProduct2(product2);
+        salesPage.addProduct(product1, product2);
     }
 
     @Then("User click icon cart")

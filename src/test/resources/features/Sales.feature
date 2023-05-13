@@ -2,7 +2,7 @@
 Feature: Sales feature
   <description>
 
-Scenario: User make a order
+Scenario: Add Product to Cart
   Given User already on website sauce demo
   When User input "standard_user" as userName and input "secret_sauce" as password
   Then User already on sales page

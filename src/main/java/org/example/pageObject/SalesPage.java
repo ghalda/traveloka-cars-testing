@@ -45,13 +45,10 @@ public class SalesPage {
         product2.click();
     }
 
-    public void addProduct1(String productName1){
+    public void addProduct(String productName1, String productName2){
         String a = "//div[text()[contains(.,'"+ productName1 +"')]]/ancestor::div[@class='inventory_item_description']//*[contains(@id, 'add-to-cart')]";
-        driver.findElement(By.xpath(a)).click();
-    }
-
-    public void addProduct2(String productName2){
         String b = "//div[text()[contains(.,'"+ productName2 +"')]]/ancestor::div[@class='inventory_item_description']//*[contains(@id, 'add-to-cart')]";
+        driver.findElement(By.xpath(a)).click();
         driver.findElement(By.xpath(b)).click();
     }
 

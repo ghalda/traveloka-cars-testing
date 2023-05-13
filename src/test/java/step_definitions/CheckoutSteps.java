@@ -18,10 +18,10 @@ public class CheckoutSteps {
         this.webDriver = Hooks.webDriver;
     }
 
-    @Then("User already on Checkout Overview Page")
-    public void verifyCheckoutOverview(){
+    @Then("User already on Checkout Information Page")
+    public void verifyCheckoutForm(){
         CheckoutPage checkoutPage = new CheckoutPage(webDriver);
-        Assert.assertTrue(checkoutPage.verifyCheckoutOverview());
+        Assert.assertTrue(checkoutPage.verifyCheckoutForm());
     }
 
     @When("User input \"(.*)\" as a firstName, input \"(.*)\" as lastName and input \"(.*)\" as postCode")
@@ -33,9 +33,26 @@ public class CheckoutSteps {
     }
 
     @And("User click Continue Button")
-    public void clickContinue() throws InterruptedException {
+    public void clickContinue(){
         CheckoutPage checkoutPage = new CheckoutPage(webDriver);
         checkoutPage.ContinueCheckout();
-        Thread.sleep(3000);
+    }
+
+    @Then("User already on Checkout Overview")
+    public void verifyCheckoutOverview() {
+        CheckoutPage checkoutPage = new CheckoutPage(webDriver);
+        checkoutPage.verifyCheckoutOverview();
+    }
+
+    @When("User click on Finish Button")
+    public void FinishButton() {
+        CheckoutPage checkoutPage = new CheckoutPage(webDriver);
+        checkoutPage.clickFinishButton();
+    }
+
+    @Then("User already on Success Page")
+    public void verifySuccessPage() {
+        CheckoutPage checkoutPage = new CheckoutPage(webDriver);
+        checkoutPage.verifySuccessPage();
     }
 }
