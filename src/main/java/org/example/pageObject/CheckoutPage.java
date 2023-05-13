@@ -48,5 +48,4 @@ public class CheckoutPage {
     public void ContinueCheckout(){
         continueCheckout.click();
     }
-
 }
