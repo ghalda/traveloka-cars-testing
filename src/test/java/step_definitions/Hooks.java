@@ -16,7 +16,7 @@ public class Hooks {
         WebDriverManager.chromedriver().setup();
         co.addArguments("--remote-allow-origins=*");
         webDriver = new ChromeDriver(co);
-        String URL = "https://www.saucedemo.com/";
+        String URL = "https://www.traveloka.com/";
         webDriver.get(URL);
         webDriver.manage().window().maximize();
     }

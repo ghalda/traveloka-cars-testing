@@ -3,7 +3,7 @@ Feature: Place Order
   User want to order product in sauce demo
 
   Scenario Outline: Order Product
-    Given User already on website sauce demo
+    Given User already on web site sauce demo
     When User input "standard_user" as userName and input "secret_sauce" as password
     Then User already on sales page
     When  User sort product list by "Price (low to high)"
